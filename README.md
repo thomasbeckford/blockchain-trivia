@@ -48,6 +48,14 @@ The project utilizes the following custom hooks:
 useBalance: get balance from $QUIZ token
 useTrivia: Receives trivia object options and return trivia values.
 
+## Resources
+
+[material ui: material ui documentation.]: https://mui.com/
+[thirdweb]: https://thirdweb.com/
+[ethers]: https://docs.ethers.org/v5/
+[nextjs 13 app directory]: https://nextjs.org/
+[framer motion]: https://www.framer.com/motion/
+
 ## Aditional notes:
 
 1. The image of the trivia is not displayed on the overview page because the API was giving an error, so I replace it for one I got from internet.
