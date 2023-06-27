@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Survey Quiz App
+
+This is a web application built using React, Next.js v13, and Context API for state management. It allows users to participate in surveys and earn tokens. The application is designed to be responsive and follows good practices of clean code and design patterns. It utilizes custom hooks for managing certain functionalities.
 
 ## Getting Started
 
-First, run the development server:
+To run the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```Clone the repository: git clone <repository_url>
+Install the dependencies: pnpm install
+Start the development server: pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_QUIZ_ADDRESS=""
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You need to set this ENV to make the project work.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+Connect your MetaMask wallet.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ensure that you are connected to the Goerli network. If not, a button will be displayed to switch networks automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The app will display the balance of the $QUIZ token on the navbar.
 
-## Deploy on Vercel
+Once the page is loaded, the title of the daily trivia along with its picture will be shown, and a button will be provided to begin answering.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each question will be displayed for a specific amount of time.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Answered or not, the app will move on to the next question.
+
+After answering all the questions, an overview with all the answers will be shown.
+
+A button will be available to submit the questions to the validator contract.
+
+The balance of the $QUIZ token will be refreshed.
+
+## Custom Hooks
+
+The project utilizes the following custom hooks:
+
+useBalance: get balance from $QUIZ token
+useTrivia: Receives trivia object options and return trivia values.
+
+## Aditional notes:
+
+1. The image of the trivia is not displayed on the overview page because the API was giving an error, so I replace it for one I got from internet.
+2. I used react context, Nextjs, MUI and Typescript to create this project. But I think nowadays the best option is use Tailwind & ChakraUI, its better, cleaner and faster.
+3. For web3 authentication I used Thirdweb, because I think is the safest and easiest way to do it. The only thing Im missing is the Sign message (and the server auth validation cookie, I think would be a good idea to add it).
