@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect, useContext } from 'react'
 import { ethers } from 'ethers'
 import { useAddress } from '@thirdweb-dev/react'

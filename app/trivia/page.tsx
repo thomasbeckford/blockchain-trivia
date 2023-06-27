@@ -1,4 +1,5 @@
 'use client'
+
 import {
   Box,
   Container,
@@ -15,9 +16,9 @@ import EndOfTrivia from '@/components/EndOfTrivia'
 import Image from 'next/image'
 import useTriviaQuestions from '@/hooks/useTriviaQuestions'
 import { useAddress } from '@thirdweb-dev/react'
-import { useRouter } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
-const TriviaQuestions = () => {
+export default function TriviaQuestions() {
   const {
     timeRemaining,
     handleOptionChange,
@@ -30,11 +31,10 @@ const TriviaQuestions = () => {
     questions: Trivia.questions,
   })
   const address = useAddress()
-  const router = useRouter()
 
   if (!address) {
-    router.push('/')
     setResponses([])
+    redirect('/')
   }
 
   if (!currentQuestionObj) {
@@ -131,5 +131,3 @@ const TriviaQuestions = () => {
     </Container>
   )
 }
-
-export default TriviaQuestions

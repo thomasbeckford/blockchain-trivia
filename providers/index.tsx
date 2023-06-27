@@ -1,5 +1,4 @@
 'use client'
-import { QueryClient } from 'react-query'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '@/theme'
 import { ThirdwebProvider, metamaskWallet } from '@thirdweb-dev/react'
@@ -12,7 +11,6 @@ type Props = {
 
 export default function Providers(props: Props) {
   const { children } = props
-  const queryClient = new QueryClient()
 
   return (
     <ThirdwebProvider

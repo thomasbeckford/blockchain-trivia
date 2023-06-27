@@ -1,4 +1,5 @@
 'use client'
+
 import { useContext, useState, useEffect, ChangeEvent } from 'react'
 import { IQuestions } from '@/types'
 import { TriviaContext } from '@/context/TriviaContext'

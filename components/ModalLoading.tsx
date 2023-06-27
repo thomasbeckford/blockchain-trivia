@@ -1,3 +1,4 @@
+'use client'
 import { Box, Typography, Modal } from '@mui/material'
 
 const style = {
