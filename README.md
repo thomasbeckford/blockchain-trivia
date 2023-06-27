@@ -2,11 +2,9 @@
 
 This is a web application built using React, Next.js v13, and Context API for state management. It allows users to participate in surveys and earn tokens. The application is designed to be responsive and follows good practices of clean code and design patterns. It utilizes custom hooks for managing certain functionalities.
 
-
 ![Screenshot 2023-06-27 at 6 03 07 PM](https://github.com/thomasbeckford/membrane-frontend-cc/assets/28713861/8fe2a35a-44ad-4784-9780-54db3b977dc4)
 
 ![Screenshot 2023-06-27 at 6 03 41 PM](https://github.com/thomasbeckford/membrane-frontend-cc/assets/28713861/5ece18ea-a9dc-4b73-a9c5-b339de96cccf)
-
 
 ## Getting Started
 
@@ -55,3 +53,4 @@ useTrivia: Receives trivia object options and return trivia values.
 1. The image of the trivia is not displayed on the overview page because the API was giving an error, so I replace it for one I got from internet.
 2. I used react context, Nextjs, MUI and Typescript to create this project. But I think nowadays the best option is use Tailwind & ChakraUI, its better, cleaner and faster.
 3. For web3 authentication I used Thirdweb, because I think is the safest and easiest way to do it. The only thing Im missing is the Sign message (and the server auth validation cookie, I think would be a good idea to add it).
+4. MISSING: react-hook-form. I think react-hook-form and yup (for form validation) are very good options. In this case, because of performance and time I prefer to set all the data on a context while I was navigating between trivia options insted of using an extra library.
