@@ -2,6 +2,12 @@
 
 This is a web application built using React, Next.js v13, and Context API for state management. It allows users to participate in surveys and earn tokens. The application is designed to be responsive and follows good practices of clean code and design patterns. It utilizes custom hooks for managing certain functionalities.
 
+
+![Screenshot 2023-06-27 at 6 03 07 PM](https://github.com/thomasbeckford/membrane-frontend-cc/assets/28713861/8fe2a35a-44ad-4784-9780-54db3b977dc4)
+
+![Screenshot 2023-06-27 at 6 03 41 PM](https://github.com/thomasbeckford/membrane-frontend-cc/assets/28713861/5ece18ea-a9dc-4b73-a9c5-b339de96cccf)
+
+
 ## Getting Started
 
 To run the project, follow these steps:
