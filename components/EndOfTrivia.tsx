@@ -50,11 +50,8 @@ export default function EndOfTrivia(props: Props) {
       await transaction.wait()
       setSuccessOpen(true)
       setLoading(false)
-      setResponses([])
       setTransactionSuccess(true)
-      setTimeout(() => {
-        router.push('/')
-      }, 3000)
+      handleBack()
     } catch (error) {
       console.error('Error submitting transaction:', error)
       setErrorOpen(true)
@@ -64,8 +61,8 @@ export default function EndOfTrivia(props: Props) {
   }
 
   const handleBack = () => {
-    router.push('/')
     setResponses([])
+    router.push('/')
   }
 
   return (
