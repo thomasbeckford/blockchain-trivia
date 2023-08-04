@@ -15,11 +15,6 @@ export default function Footer() {
         <Typography variant="body2" color="textSecondary" align="center">
           &copy; 2023 with ❤️ By Thomas
         </Typography>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-          align="center"
-        ></Typography>
       </Container>
     </Box>
   )

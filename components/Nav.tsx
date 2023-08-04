@@ -6,6 +6,9 @@ import useBalance from '@/hooks/useBalance'
 export default function Nav() {
   const balance = useBalance()
 
+  const balanceBigInt = BigInt(balance)
+  const balanceNumber = Number(balanceBigInt)
+
   return (
     <AppBar
       position="static"
@@ -17,14 +20,14 @@ export default function Nav() {
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Membrane Test App
+              Blockchain Trivia
             </Typography>
             <Typography
               variant="subtitle1"
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              Balance: {balance}
+              Balance: {balanceNumber}
             </Typography>
           </Box>
           <AuthButton />

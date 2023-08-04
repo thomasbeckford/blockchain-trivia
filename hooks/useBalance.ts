@@ -21,7 +21,10 @@ export default function useBalance() {
         signer
       )
       contract.balanceOf(address).then((balance: any) => {
-        setBalance(balance.toString())
+        // Feat: transform balance from wei to ether
+        const bala = balance.toLocaleString('fullwide', { useGrouping: false })
+        const balanceInEth = ethers.utils.formatEther(bala)
+        setBalance(Number(balanceInEth))
       })
     } else {
       setBalance(0)
